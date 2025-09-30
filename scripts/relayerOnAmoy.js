@@ -111,11 +111,11 @@ async function main() {
     // --- 10. Show final balances ---
     console.log(
         "User balance after meta-tx:",
-        ethers.formatEther(await ethers.provider.getBalance(user.address))
+        ethers.formatEther(await user.provider.getBalance(user.address))
     );
     console.log(
         "Relayer balance after meta-tx:",
-        ethers.formatEther(await ethers.provider.getBalance(relayer.address))
+        ethers.formatEther(await user.provider.getBalance(relayer.address))
     );
 }
 
